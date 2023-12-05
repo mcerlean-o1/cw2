@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+
+    <title> GymStream Sign-up </title>
+
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
+      <script type="text/javascript" src="JS/bootstrap.js"></script>
+      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+
+      <script type="text/javascript" src="JS/app.js"></script>
+
+  </head>
+  
+  <body>
+
+    <div  class="container">
+
+        <!--Header-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: center;">
+              <h3>GymStream Sign-up</h3>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!--New Asset Box-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
+              <h4 style="text-align: center;">Provide your details</h4>
+
+              <form style="font-size: 10pt;" id="newMembersForm">
+                <div class="mb-3">
+                  <label for="MemberUsername" class="form-label"> Member Username </label>
+                  <input type="text" class="form-control" id="MemberUsername">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Password" class="form-label"> Password </label>
+                  <input type="text" class="form-control" id="Password">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="MemberName" class="form-label"> Member Name </label>
+                  <input type="text" class="form-control" id="MemberName">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Gender" class="form-label"> Gender</label>
+                  <input type="text" class="form-control" id="Gender">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Address" class="form-label"> Email</label>
+                  <input type="text" class="form-control" id="Address">
+                </div>
+
+                <div class="mb-3">
+                  <label for="TrainingDesc" class="form-label"> Training Description</label>
+                  <input type="text" class="form-control" id="TrainingDesc">
+                </div>
+            
+                <button type="button" id="subNewForm" class="btn btn-primary"> Submit</button> <br/><br/>
+                
+              </form>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+
+  
+  </body>
+</html>
