@@ -55,8 +55,8 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: red;
-  --bs-body-bg: black;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
 }
 
 *,
@@ -71,37 +71,23 @@
   }
 }
 
-.modal-header{
-  background-color: #1b1b1b;
-  border-color: red;
-  border-style: solid;
-  border-width: medium;
-  border-bottom: solid;
-}
-.modal-body{
-  background-color: var(--bs-body-bg);
-  border-color: red;
-  border-style: solid;
-  border-width: medium;
-}
-
-
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-red);
+  color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: black;
+  background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 hr {
   margin: 1rem 0;
-  color: var(--bs-red);
+  color: inherit;
+  background-color: currentColor;
   border: 0;
   opacity: 0.25;
 }
@@ -111,15 +97,14 @@ hr:not([size]) {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  text-align: center;
-  color: var(--bs-red);
-  margin-bottom: auto;
-  font-weight: 1000;
-  line-height: 5;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 h1, .h1 {
-  font-size: calc(3.75rem + 2.1vw);
+  font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
@@ -146,7 +131,12 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: calc(1.275rem);
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
 }
 
 h5, .h5 {
@@ -158,49 +148,9 @@ h6, .h6 {
 }
 
 p {
-  margin-top: auto;
-  text-align: center;
-  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
-
-.container {
-  border-radius: 2px;
-  text-align: center;
-}
-
-button {
-  background-color: var(--bs-red);
-  font-size: 24px;
-  font-weight: 500;
-  padding: 32px 16px;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-button:hover span {
-  padding-right: 25px;
-}
-
-button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
 
 abbr[title],
 abbr[data-bs-original-title] {
@@ -378,11 +328,16 @@ label {
   display: inline-block;
 }
 
+button {
+  border-radius: 0;
+}
+
 button:focus:not(:focus-visible) {
   outline: 0;
 }
 
 input,
+button,
 select,
 optgroup,
 textarea {
