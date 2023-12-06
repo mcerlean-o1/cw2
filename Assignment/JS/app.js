@@ -317,7 +317,7 @@ function memberLogin() {
     type: 'POST',
     success: function(data){
       console.log("Login successful:", data),
-      window.location.href = "media.html";
+      window.location.href = "https://brave-mud-0114af310.4.azurestaticapps.net/media.html";
       alert("Login was successful")
     },
     error: function(xhr, status, error) {
