@@ -305,7 +305,6 @@ function memberLogin() {
     Password: $('#Password').val()
   }
 
-  //yonkers
   //URI for Login
   uri = "https://prod-25.eastus.logic.azure.com:443/workflows/1fb66e987c2d40d1ace9c535a084000f/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=DOugHcgJ6klb-dBweA-FHElruQYN4LDfoPZjBu7yulM"
 
