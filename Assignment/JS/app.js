@@ -60,7 +60,7 @@ $(document).ready(function() {
 
 
     //Handler for the new asset submission button
-   $("#subNewForm").click(function(){
+   $("#subNewMemberForm").click(function(){
 
     //Execute the submit new asset function
     submitNewMembers();
