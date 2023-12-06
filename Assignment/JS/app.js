@@ -255,46 +255,8 @@ function updateMember(){
 
     getMemberList();
 
-    //$('#editMemberModal').modal('hide');
 
   });
-}
-
-
-//ASK ABOUT THIS
-function translateText() {
-
-  var targetLanguage = document.getElementById("targetLanguage").value;
-  traverseAndTranslate(document.body, targetLanguage);
-}
-
-function traverseAndTranslate(node, targetLanguage) {
-  if(node.nodeType == Node.TEXT_NODE) {
-    translateNodeText(node, targetLanguage);
-  } else {
-    for (var i = 0; i < node.childNodes.length; i++) {
-      traverseAndTranslate(node.childNodes[i], targetLanguage);
-    }
-  }
-}
-
-function translateNodeText(node, targetLanguage) {
-  var xhr = new XMLHttpRequest();
-  var endpoint = "/translator-app.py"
-  xhr.open("POST", endpoint, true);
-  xhr.setRequestHeader("Content-type", "application/json");
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      node.nodeValue = xhr.responseText;
-    }
-  };
-
-  var data = {
-    "text_to_translate": node.nodeValuel,
-    "target_language": targetLanguage
-  };
-  xhr.send(JSON.stringify(data) );
 }
 
 
