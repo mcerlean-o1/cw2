@@ -13,7 +13,7 @@ UIAURI0 = "https://prod-09.eastus.logic.azure.com/workflows/c35ecc6e433f41cea7a1
 UIAURI1 = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=HihiEPqEUK8OxlWXxIqQLGrgBCqda9BWVc6bRNbYw-4";
 
 
-//The URI of the sign up page 
+//The URI for the sign up page 
 CIAURI = "https://prod-16.eastus.logic.azure.com/workflows/59739a78585842da85c92c59738074b4/triggers/manual/paths/invoke/rest/v1/members?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=RS2XXN_8PTCYXPr3mC4qyH-l1cStm7HWOjH6TyNqp8k";
 
 
@@ -33,7 +33,7 @@ function submitNewMembers(){
   //Convert to a JSON String
   subObj = JSON.stringify(subObj);
 
-  //Post the JSON string to the endpoint, note the need to set the content type header
+  //Post the JSON string to the endpoint
   $.post({
     url: CIAURI,
     data: subObj,

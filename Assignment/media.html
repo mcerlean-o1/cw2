@@ -12,6 +12,7 @@
       <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="JS/app.js"></script>
+      <script type="text/javascript" src="JS/translator.js"></script>
 
   </head>
   
@@ -107,6 +108,20 @@
         </div>
       </div>
 
+      <div class="container" style="text-align: center;">
+        <h4 style="text-align: center;">Translator</h4>
+        <input type="text" id="language" style="width: auto;" placeholder="enter language">
+        <input type="text" id="textTranslate" style="width: auto;" placeholder="Enter text which you wish to translate">
+        <button class="btn btn-warning" id="translateText">Translate</button>
+      </div>
+      <div id="translationResult" style="text-align: center;"></br>
+      </div>
+
+
+      <div class="container">
+        <iframe class="chatbot" src='https://webchat.botframework.com/embed/qnamaker-b00800485-bot?s=VCSKUTrnLrw.mP5JDn1oMfucpM19vQqaSsYkJ_ic7PDy_Jay6PF2dCo'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+      </div>
+
     <div class="modal fade" id="MemberModal" tabindex="-1" role="dialog" aria-labelledby="MemberModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -147,9 +162,7 @@
       </div>
   </div>
 
-  
 
-        <iframe class="chatbot" src='https://webchat.botframework.com/embed/qnamaker-b00800485-bot?s=VCSKUTrnLrw.mP5JDn1oMfucpM19vQqaSsYkJ_ic7PDy_Jay6PF2dCo'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
 
 
   </body>
