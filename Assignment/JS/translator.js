@@ -33,15 +33,19 @@ function translate(){
     var body = JSON.stringify([{ 'text': translateText}]); 
   
   
-   fetch(tranurl + '?' + new URLSearchParams(params), {
-      method: 'POST',
-      headers: headers,
-      body: body
-   }).then((response) => {
-     return response.json()
-   }).then((data) => {
+    fetch(tranurl + '?' + new URLSearchParams(params), {
+        method: 'POST',
+        headers: headers,
+        body: body
+    }).then((response) => {
+        return response.json()
+    }).then((data) => {
         $("#translationResult").empty();
         $('#translationResult').text(data[0].translations[0].text);
-  
-      });
-    }
+    }).catch((error) => {
+            console.error("Error:", error);
+            alert("Incorrect Language Code")
+    
+    });
+}
+    
