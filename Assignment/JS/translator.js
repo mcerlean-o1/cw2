@@ -40,10 +40,8 @@ function translate(){
    }).then((response) => {
      return response.json()
    }).then((data) => {
-      $("#translationResult").empty();
-      for (let i =0; i<data[0].translations.length; i++) {
-        $('#translationResult').append(data[0].translations[i].text);
+        $("#translationResult").empty();
+        $('#translationResult').text(data[0].translations[0].text);
   
-      }
-   }).appendTo('translationResult')
-  }
+      });
+    }
