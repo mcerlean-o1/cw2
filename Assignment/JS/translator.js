@@ -14,7 +14,6 @@ function translate(){
     let endpoint = "https://api.cognitive.microsofttranslator.com/";
     let location = "eastus";
     let language = document.getElementById('language').value;
-    var items =[];
     const params ={
       'api-version': '3.0',
               'from': 'en',
