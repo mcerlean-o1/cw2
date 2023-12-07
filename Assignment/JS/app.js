@@ -144,7 +144,7 @@ $.ajax({
 
 }
 
-//A function to get a list of all the members and write them to the Div with the MemberList Div
+//A function to get a list of all the members
 function getImages(){
 
   $('#ImageList').html('<div class="spinner-border" role="status"><span class="sr-only">&nbsp;</span>');
@@ -175,7 +175,7 @@ function getImages(){
 
 
 
-//A function to get a list of all the assets and write them to the Div with the AssetList Div
+//A function to get a list of all the assets
 function getMemberList(){
 
   //Replace the current HTML in that div with a loading message
